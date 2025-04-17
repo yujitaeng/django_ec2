@@ -12,4 +12,5 @@ COPY . .
 
 RUN python manage.py collectstatic --noinput
 
+
 CMD ["gunicorn", "django_ec2.wsgi:application", "--config", "gunicorn.conf.py"]
